@@ -37,6 +37,16 @@ ol {
   list-style: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .content {
   min-width: 1140px;
   margin-top: 133px;
@@ -62,9 +72,10 @@ ol {
 
 .search-form {
   display: flex;
-  gap: 26px;
+  gap: 40px;
+  align-items: flex-end;
   justify-content: space-between;
-  align-items: flex-start;
+  width: 711px;
 }
 
 .content__details {
@@ -131,4 +142,88 @@ ol {
   line-height: 16.2px;
   letter-spacing: 0;
   color: #FFFFFF;
+}
+
+.search-form__fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: fit-content;
+  align-self: flex-start;
+}
+
+.search-form__fieldset-title {
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0;
+  width: 100%;
+  margin-bottom: 6.5px;
+  font-size: 18px;
+}
+
+.search-form__textfield {
+  appearance: none;
+  background-color: transparent;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0;
+  padding-top: 5px;
+  border: none;
+  line-height: 100%;
+  min-width: 225px;
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  opacity: 70%;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.search-form__textfield::placeholder {
+  color: #FFFFFF;
+  opacity: 70%;
+  font-weight: 400;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  width: auto;
+}
+
+.search-form__pseudo-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #FFFFFF;
+  display: inline-block;
+}
+
+.button {
+  background-color: transparent;
+  color: #FFFFFF;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
+  border: 1px solid white;
+  padding: 6px 73.5px;
+  cursor: pointer;
+}
+
+.search-form__submit-button {
+  align-self: flex-end;
+  width: fit-content;
+}
+
+.more-button {
+  width: 100%;
 }
